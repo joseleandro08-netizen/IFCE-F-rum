@@ -1,0 +1,173 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 60px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* NAV LEFT */
+.nav-left .profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* NAV CENTER */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-center input {
+    width: 60%;
+    max-width: 400px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.nav-center input:focus {
+    border-color: #007bff;
+}
+
+/* NAV RIGHT */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.login {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.signup {
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.signup:hover {
+    background: #0056b3;
+}
+
+
+/* ===== LAYOUT PRINCIPAL ===== */
+
+.section-feed {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    height: calc(100vh - 60px); /* altura da tela menos navbar */
+}
+
+/* COLUNA 1 */
+.grid-item-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 12px;
+
+    position: sticky;
+    top: 60px; /* abaixo da navbar */
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
+/* COLUNA 2 (FEED) */
+.grid-item-feed {
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* CONTAINER POSTS */
+.container-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+/* POSTS */
+.post {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.post img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* COLUNA 3 */
+.grid-item-comunity {
+    padding: 20px;
+
+    position: sticky;
+    top: 60px;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    background: #f9f9f9;
+    #title{
+        text-align: center;
+    }
+}
+
+.comunity-itens {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* BOTÕES */
+button {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: none;
+    background: #eaeaea;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #d5d5d5;
+}
